@@ -30,15 +30,14 @@
 
 
 
-***This is currently working _in progress and incomplete_. 
-I have managed to complete up to step 7, however I am having challenge on step 8 with the deployment of the health check and API through scripting.
-The attached code will create:
->Ubuntu 18.04 on Azure 1bs instance
->Regional choice: Australia East
->Network security Group restricted to inbound port 80/443/22, and the inbound public IP address of the tester.
->UFW firewall on Ubuntu restricting inbound access only for port 80/443/22
->Installation of Docker CE and Nginx-server container on port 80
-***
+***This is currently working _in progress and incomplete_.***
+***I have managed to complete up to step 7, however I am having challenge on step 8 with the deployment of the health check and API through scripting.***
+***The attached code will create:***
+***>Ubuntu 18.04 on Azure 1bs instance***
+***>Regional choice: Australia East***
+***>Network security Group restricted to inbound port 80/443/22, and the inbound public IP address of the tester.***
+***>UFW firewall on Ubuntu restricting inbound access only for port 80/443/22***
+***>Installation of Docker CE and Nginx-server container on port 80***
 
 
 
