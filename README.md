@@ -42,13 +42,14 @@
 
 
 
-##Prerequisites##
+##Prerequisites
 >Require latest Terraform
 >Powershell & Powershell CLI 
 
 
 
-##To run the code for the deployment## 
+##To run the code for the deployment 
+
 1)First create a local folder and save the all the attached files on the same folder.
 Example I place the code on the "C:\terraform\Qrious2>" folder
 
