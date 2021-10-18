@@ -31,6 +31,50 @@
 
 
 ***This is currently working _in progress and incomplete_. 
-I have managed to complete up to step 7, however I am also having issue with deploying persistance healthcheck.
-Below are just some of the current code that I have..***
+I have managed to complete up to step 7, however I am having challenge on step 8 with the deployment of the health check and API through scripting.
+The attached code will create:
+>Ubuntu 18.04 on Azure 1bs instance
+>Regional choice: Australia East
+>Network security Group restricted to inbound port 80/443/22, and the inbound public IP address of the tester.
+>UFW firewall on Ubuntu restricting inbound access only for port 80/443/22
+>Installation of Docker CE and Nginx-server container on port 80
+***
+
+
+
+
+##Prerequisites
+>Require latest Terraform
+>Powershell & Powershell CLI 
+>Save a copy of the SH private key for remote which will be discussed below
+
+
+##To run the code for the deployment 
+1)First create a local folder and save the all the attached files on the same folder.
+Example I place the code on the "C:\terraform\Qrious2>" folder
+
+2)Run a terminal on terraform application change the terminal directory to the folder location. 
+
+3)Use terraform command "terraform init", this should load the require terraform library for azure 
+
+![image](https://user-images.githubusercontent.com/84843818/137726080-c08b6860-3bce-4642-a2cf-22e51165b0e3.png)
+
+4)Next user terraform command "terraform plan"
+
+![image](https://user-images.githubusercontent.com/84843818/137726398-1dc987ef-ad5b-4830-ab46-de3c9454a19e.png)
+
+5)Final step to deploy the environment, using command "terraform apply -auto-approve"
+![image](https://user-images.githubusercontent.com/84843818/137726655-72d60920-fe51-4c6d-86b4-2b5c70a34234.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
