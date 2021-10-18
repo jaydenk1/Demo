@@ -78,12 +78,16 @@ Such as C:/{user}/.ssh/
 
 8)To securely connecting to the server simply, run powershell
 
-'''
+```
 ssh -i {.pkk file location} Qriousadmin@{IP add of the server}
-'''
+```
 ![image](https://user-images.githubusercontent.com/84843818/137739042-87a2d4e4-0707-49ca-a2a9-7d6804e30982.png)
 
-
+To check running nginx container
+```
+sudo docker ps
+```
+![image](https://user-images.githubusercontent.com/84843818/137739284-45b13aca-2e31-441c-a81a-23f247185f46.png)
 
 
 
