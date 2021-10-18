@@ -43,13 +43,13 @@ The attached code will create:
 
 
 
-##Prerequisites
+##Prerequisites##
 >Require latest Terraform
 >Powershell & Powershell CLI 
->Save a copy of the SH private key for remote which will be discussed below
 
 
-##To run the code for the deployment 
+
+##To run the code for the deployment## 
 1)First create a local folder and save the all the attached files on the same folder.
 Example I place the code on the "C:\terraform\Qrious2>" folder
 
