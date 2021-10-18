@@ -66,7 +66,22 @@ Example I place the code on the "C:\terraform\Qrious2>" folder
 5)Final step to deploy the environment, using command "terraform apply -auto-approve"
 ![image](https://user-images.githubusercontent.com/84843818/137726655-72d60920-fe51-4c6d-86b4-2b5c70a34234.png)
 
+6)Once completed, it will give you an public address like below
+![image](https://user-images.githubusercontent.com/84843818/137737493-80250252-37f4-4e0f-acb1-408971e491ac.png)
 
+7)You will need to grab the private key use the following command
+```
+terraform output -raw tls_private_key
+````
+copy the entire string from "-----BEGIN RSA PRIVATE KEY-----" to "-----END RSA PRIVATE KEY-----" and save it as a .ppk file on a .ssh folder.
+Such as C:/{user}/.ssh/
+
+8)To securely connecting to the server simply, run powershell
+
+'''
+ssh -i {.pkk file location} Qriousadmin@{IP add of the server}
+'''
+![image](https://user-images.githubusercontent.com/84843818/137739042-87a2d4e4-0707-49ca-a2a9-7d6804e30982.png)
 
 
 
