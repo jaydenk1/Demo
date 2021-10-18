@@ -1,5 +1,5 @@
 # Demo
- This is a demo project based on the following outline requirement but will be based on Azure.  
+ This is a demo assignment based on the following outline requirement but will be based on Azure.  
  
  1)The deployment should take AWS credentials and AWS region as input parameters.
  2)A VPC with the required networking, don't use the default VPC.
