@@ -28,7 +28,7 @@
 
 
 
-*This is currently working in progress and incomplete. 
+**This is currently working in progress and incomplete. 
 I have managed to complete up to step 7, however I am also having issue with deploying persistance healthcheck.
-Below are just some of the current code that I have..*
+Below are just some of the current code that I have..**
 
