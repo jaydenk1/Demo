@@ -70,8 +70,8 @@ sudo docker restart nginx-server
 ```
 
 
-#Incomplete- Log health status and usage of the container to a log file 
-To check the health and usage of the container, we can use following command to place the stats and time into the file 'stats.txt', however thres is a delay of an extra 1-2 seconds appending the date and loop during infrastructure deployment. 
+#Incomplete- Log health status and usage of the container to a log file and then create a REST API to search adn read the log file.
+To check the health and usage of the container, we can use the following command, however there is a delay of an extra 1-2 seconds placing the time, and it is introducing loop during infrastructure deployment, therefore this is currently disable on the script. 
 ```
 sudo sh -c "while true; do docker stats --no-stream && $(echo date) | tee --append stats.txt; sleep 10; done"
 ```
