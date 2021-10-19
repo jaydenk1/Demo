@@ -58,11 +58,17 @@ ssh -i {.pkk file location} Qriousadmin@{IP add of the server}
 ```
 ![image](https://user-images.githubusercontent.com/84843818/137739042-87a2d4e4-0707-49ca-a2a9-7d6804e30982.png)
 
-7) To check running containers
+7) To check running containers, restart or stats
 ```
 sudo docker ps
 ```
 ![image](https://user-images.githubusercontent.com/84843818/137739284-45b13aca-2e31-441c-a81a-23f247185f46.png)
+
+To restart the docker container
+```
+sudo docker restart nginx-server
+```
+
 
 # Risks
 - Virtual machine is directly accessible over the internet on ports 80,443 and 22. It is however locked to users public ip address.
