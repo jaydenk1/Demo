@@ -13,7 +13,7 @@ The goal of terraform code and scripts in this repository are:
 - Create a linux virutal machine in the previously created subnet.
 - Place and execute a script on the virtual machine to change firewall settings.
 - Install Docker and run nginx container on the virtual machine.
-- Log health status of the container to a log file.
+- Log health status and usage of the container to a log file.
  
 # Prerequisites
 - Terraform
@@ -68,6 +68,15 @@ To restart the docker container
 ```
 sudo docker restart nginx-server
 ```
+
+
+#Incomplete- Log health status and usage of the container to a log file 
+To check the health and usage of the container, we can use following command to place the stats and time into the file 'stats.txt', however thres is a delay of an extra 1-2 seconds appending the date and loop during infrastructure deployment. 
+```
+sudo sh -c "while true; do docker stats --no-stream && $(echo date) | tee --append stats.txt; sleep 10; done"
+```
+![image](https://user-images.githubusercontent.com/84843818/137843173-fed71c5f-9e32-456c-a5e4-3764a99a0447.png)
+
 
 
 # Risks
