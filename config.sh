@@ -65,11 +65,7 @@ sudo systemctl enable cron
 # cron generator 0/10 0 0 ? * * *
 
 
-#A lot of formula to trigger 10secs on cron has fail like for example */10 * * * * *, cron generator 0/10 0 0 ? * * *
-# or '* * * * * for i in {1..6}; do sudo  /bin/sh /tmp/log.sh & sleep 10; done'
-#However this is only one that work, by however will have a delay for 1 min before prducing data.
-#In additional to this, noted that this is not the docker stats but it does producing date.
-#Found out that it is not possible to query docker stats through cron on ubuntu
+#crontab to be populated with schedule trigger every 10 seconds
 (crontab -l 2>/dev/null; echo "* * * * * ( /bin/sh /tmp/log.sh )") | crontab
 (crontab -l 2>/dev/null; echo "* * * * * ( sleep 10 ; /bin/sh /tmp/log.sh )") | crontab
 (crontab -l 2>/dev/null; echo "* * * * * ( sleep 20 ; /bin/sh /tmp/log.sh )") | crontab
