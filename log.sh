@@ -1,2 +1,2 @@
 #!/bin/sh
-docker stats --no-stream && $(echo date) | tee --append stats.txt
+sudo docker stats --no-stream && $(echo date) | tee --append stats.txt
