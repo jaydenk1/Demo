@@ -1,2 +1,9 @@
 #!/bin/sh
-sudo docker stats --no-stream && $(echo date) | tee --append stats.txt
+
+
+
+CPU=$(sudo docker stats --no-stream)
+DATE=`date`
+echo $DATE >> stats.txt
+echo $CPU >> stats.txt
+
