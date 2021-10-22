@@ -1,6 +1,9 @@
 #!/bin/sh
 
 sudo timedatectl set-timezone Pacific/Auckland
+sudo mkdir /home/script
+sudo cp -r /tmp/log.sh /home/script/log.sh
+sudo mkdir /home/Qriousadmin/log
 
 ## first Configure install the firewall 
 sudo apt-get update  && sudo apt-get -y upgrade
@@ -44,36 +47,42 @@ sudo systemctl enable docker
 sudo docker pull nginx
 sudo docker run -d --name nginx-server -p 80:80 nginx
 
-## Log the health status and resource usage of the NGINX container every 10 seconds into a log file
-#update server & docker time zone to Auckland
+## Log the health status and resource usage of the NGINX container every 10 seconds into a log file.
+#It also remove and backup log @12.05 am every Sunday
 
-#CONTAINER_ID="$(sudo docker ps --no-trunc -aqf "name=nginx-server")"
-sudo chmod u+x /tmp/log.sh
+
+sudo chmod u+x /home/script/log.sh
 sudo apt update
 sudo apt install cron
 sudo systemctl enable cron
-#sudo /bin/bash -c 'echo "*/10 * * * * * /bin/sh /tmp/log.sh" >> /etc/crontab'
-#echo "* * * * * bash /tmp/log.sh 2>&1 >> /var/log/somelog.log" >> /var/spool/cron/root 
-#*/10 * * * * * sudo /tmp/log.sh >/dev/null 2>&1
+
+(crontab -l 2>/dev/null; echo "5 1 * * 7 (sudo cp /home/Qriousadmin/log/stats.txt /home/Qriousadmin/log/statsbackup.txt)") | crontab
+(crontab -l 2>/dev/null; echo "5 1 * * 7 (sudo rm /home/Qriousadmin/log/stats.txt)") | crontab
+
+(crontab -l 2>/dev/null; echo "* * * * * ( /bin/sh /home/script/log.sh )") | crontab
+(crontab -l 2>/dev/null; echo "* * * * * ( sleep 10 ; /bin/sh /home/script/log.sh )") | crontab
+(crontab -l 2>/dev/null; echo "* * * * * ( sleep 20 ; /bin/sh /home/script/log.sh )") | crontab
+(crontab -l 2>/dev/null; echo "* * * * * ( sleep 30 ; /bin/sh /home/script/log.sh )") | crontab
+(crontab -l 2>/dev/null; echo "* * * * * ( sleep 40 ; /bin/sh /home/script/log.sh )") | crontab
+(crontab -l 2>/dev/null; echo "* * * * * ( sleep 50 ; /bin/sh /home/script/log.sh )") | crontab
 
 
-#sudo sh -c "while true; do docker stats --no-stream && $(echo date) | tee --append stats.txt; sleep 10; done"
-#sudo echo '1' && "0/10 * * * * * /tmp/log.sh" | sudo crontab -e
-#* * * * * for i in {1..6}; do /tmp/log.sh & sleep 10; done
-#10 seconds job for cron, supposely chuck this on the crontab but not working
-#       * * * * * for i in {1..6}; do sudo  /bin/sh /tmp/log.sh & sleep 10; done
-# cron generator 0/10 0 0 ? * * *
-
-
-#crontab to be populated with schedule trigger every 10 seconds
-(crontab -l 2>/dev/null; echo "* * * * * ( /bin/sh /tmp/log.sh )") | crontab
-(crontab -l 2>/dev/null; echo "* * * * * ( sleep 10 ; /bin/sh /tmp/log.sh )") | crontab
-(crontab -l 2>/dev/null; echo "* * * * * ( sleep 20 ; /bin/sh /tmp/log.sh )") | crontab
-(crontab -l 2>/dev/null; echo "* * * * * ( sleep 30 ; /bin/sh /tmp/log.sh )") | crontab
-(crontab -l 2>/dev/null; echo "* * * * * ( sleep 40 ; /bin/sh /tmp/log.sh )") | crontab
-(crontab -l 2>/dev/null; echo "* * * * * ( sleep 50 ; /bin/sh /tmp/log.sh )") | crontab
 
 ## REST API....
+
+sudo docker rm nginx-server --force
+sudo docker run -v /home/Qriousadmin:/usr/share/nginx/html/ -d --name nginx-server -p 80:80 nginx
+
+CONTAINER_ID="$(sudo docker ps --no-trunc -aqf "name=nginx-server")"
+sudo docker exec -it $CONTAINER_ID bash -c 'apt-get -y update && apt -y install nano'
+
+
+
+#sudo docker exec -it $CONTAINER_ID /bin/bash
+
+#curl "file:///mnt/restapi/stats.txt"
+#H_STATS="/usr/share/nginx/html"
+
 
 
 
