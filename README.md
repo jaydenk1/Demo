@@ -28,7 +28,7 @@ The goal of terraform code and scripts in this repository are:
 git clone https://github.com/jaydenk1/Demo && cd Demo/
 ``` 
 
-Important: Once you have download the code, create 2 sub folders. One for 'scripts' and the other 'Tf'. Move files with scripts extension to scripts folder (7 scripts highlight in red). Terraform file to Tf folder (highlight in yellow).
+Important: Once you have download the code, create 2 sub folders. One for 'scripts' and the other 'tf'. Move files with scripts extension to scripts folder (7 scripts highlight in red). Terraform file to tf folder (highlight in yellow).
 
 ![image](https://user-images.githubusercontent.com/84843818/138694989-65dd1fed-af08-4e1a-bb1f-5d22c47ecf04.png)
 
