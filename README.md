@@ -56,22 +56,22 @@ terraform apply -auto-approve
 
 ![image](https://user-images.githubusercontent.com/84843818/137737493-80250252-37f4-4e0f-acb1-408971e491ac.png)
 
-5) Extract the private key using the following command
+5) Extract the private key using the following command.
 ```
 terraform output -raw tls_private_key
 ```
-Save the private key to user folder C:/{user}/.ssh/
+Copy the key and save the private key to user folder C:/{user}/.ssh/xxx.ppk
 
 
 6) To connect to the server simply, run the following command in terminal.
 
 ```
-ssh -i {full .pkk file location & name} qriousadmin@{IP add of the server}
+ssh -i c:/{users/.ssh/xxx.pkk} qriousadmin@{IP add of the server}
 ```
 ![image](https://user-images.githubusercontent.com/84843818/138695230-6d9840b3-961f-4631-9197-39930c28a9dc.png)
 
 
-7) To check running containers or docker restart 
+7) If you want to check status of running containers or restart docker container 
 ```
 sudo docker ps
 ```
