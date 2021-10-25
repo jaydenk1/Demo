@@ -54,7 +54,7 @@ Save the private key to user folder C:/{user}/.ssh/
 6) To connect to the server simply, run the following command in terminal.
 
 ```
-ssh -i {.pkk file location} Qriousadmin@{IP add of the server}
+ssh -i {.pkk file location} qriousadmin@{IP add of the server}
 ```
 ![image](https://user-images.githubusercontent.com/84843818/137739042-87a2d4e4-0707-49ca-a2a9-7d6804e30982.png)
 
@@ -62,25 +62,34 @@ ssh -i {.pkk file location} Qriousadmin@{IP add of the server}
 ```
 sudo docker ps
 ```
-![image](https://user-images.githubusercontent.com/84843818/137739284-45b13aca-2e31-441c-a81a-23f247185f46.png)
+![image](https://user-images.githubusercontent.com/84843818/138661254-2cf5a821-a956-4db6-8305-e09e81454cba.png)
+
 
 To restart the docker container
 ```
-sudo docker restart nginx-server
+sudo docker restart webserver
 ```
 
 
-#Incomplete- Log health status and usage of the container to a log file and then create a REST API to search adn read the log file.
-To check the health and usage of the container, we can use the following command, however there is a delay of an extra 1-2 seconds placing the time, and it is introducing loop during infrastructure deployment, therefore this is currently disable on the script. 
-```
-sudo sh -c "while true; do docker stats --no-stream && $(echo date) | tee --append stats.txt; sleep 10; done"
-```
-![image](https://user-images.githubusercontent.com/84843818/137843173-fed71c5f-9e32-456c-a5e4-3764a99a0447.png)
+8) Log health status health check every 10 seconds + delete & backup log, and the page can be access externally http://qrious.australiaeast.cloudapp.azure.com/containerlogs.html 
+
+![image](https://user-images.githubusercontent.com/84843818/138662677-7a337c06-c2c0-4b7e-bc71-ce89db9f566f.png)
+
+![image](https://user-images.githubusercontent.com/84843818/138661765-aa015dc0-4259-4c57-a34d-a78ae3d81dc1.png)
+
+![image](https://user-images.githubusercontent.com/84843818/138661843-7d1e1f88-04be-4941-8410-b60b0dac8252.png)
+
+API server is up and running, but REST API is incomplete and still working in progress.
+
+![image](https://user-images.githubusercontent.com/84843818/138663256-18b85cc2-7274-4860-a95d-3f167ed27773.png)
+
+The finaly plan is getting Rest Api to pass the string of 'healthy' or 'unhelthy' to the healthstatus script for info such as below.
+![image](https://user-images.githubusercontent.com/84843818/138663727-4ccd9b6a-6ba9-4093-82fd-acf1aae2d48c.png)
 
 
 
 # Risks
-- Virtual machine is directly accessible over the internet on ports 80,443 and 22. It is however locked to users public ip address.
+- Virtual machine is directly accessible over the internet on ports 8080, 80,443 and 22. It is however locked to users public ip address.
 - Terraform State file is local
 - No policies/protection for the webserver hosted in the VM except port level blocking.
 - No high availabiltiy, BCDR or monitoring in place.
