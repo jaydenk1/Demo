@@ -97,7 +97,7 @@ API server is up and running, however REST API client is incomplete.
 
 ![image](https://user-images.githubusercontent.com/84843818/138663256-18b85cc2-7274-4860-a95d-3f167ed27773.png)
 
-The finaly plan is to have Rest Api to pass input such as 'healthy' or 'unhealthy' status result to API.
+The final plan is to have Rest Api working by pass the input such as 'healthy' or 'unhealthy' status procure the result, but incomplete.
 ![image](https://user-images.githubusercontent.com/84843818/138663727-4ccd9b6a-6ba9-4093-82fd-acf1aae2d48c.png)
 
 
