@@ -22,21 +22,17 @@ The goal of terraform code and scripts in this repository are:
 
 # Getting Started
 
-1) Open VS Code > terminal, navigate to the folder where you wish to store the code and then clone the repository.
-   
+1) Open VS Code > terminal, navigate to the folder where you wish to store the code and then clone the repository.   
 ```
 git clone https://github.com/jaydenk1/Demo && cd Demo/
 ``` 
 
-Important: Once you have download the code, create 2 sub folders. One for 'scripts' and the other 'tf'. Move files with scripts extension to scripts folder (7 scripts highlight in red). Terraform file to tf folder (highlight in yellow).
-
 ![image](https://user-images.githubusercontent.com/84843818/138694989-65dd1fed-af08-4e1a-bb1f-5d22c47ecf04.png)
 
-
-
-![image](https://user-images.githubusercontent.com/84843818/138668553-92710c83-a4e3-4ef0-9f41-68448ab244a6.png)
-
-![image](https://user-images.githubusercontent.com/84843818/138694842-1b22270b-1fd2-47d4-b2fc-0c97becf0392.png)
+Once you have download the codes, change directory to 'tf'.
+```
+cd tf
+``` 
 
 
 2) Initialize terraform and then terraform plan
