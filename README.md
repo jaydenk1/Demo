@@ -27,6 +27,12 @@ The goal of terraform code and scripts in this repository are:
 ```
 git clone https://github.com/jaydenk1/Demo && cd Demo/
 ``` 
+Important: Create a 'scripts' folder on the choosen location. Move the following scripts (7 scripts highlight in red) into the 'scripts' folder.
+![image](https://user-images.githubusercontent.com/84843818/138667863-1d399b45-209a-4b02-9f78-285634cadbbc.png)
+
+![image](https://user-images.githubusercontent.com/84843818/138668553-92710c83-a4e3-4ef0-9f41-68448ab244a6.png)
+
+
 
 2) Initialize terraform.
 ```
