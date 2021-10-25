@@ -64,7 +64,7 @@ ssh -i {.pkk file location} qriousadmin@{IP add of the server}
 ```
 ![image](https://user-images.githubusercontent.com/84843818/137739042-87a2d4e4-0707-49ca-a2a9-7d6804e30982.png)
 
-7) To check running containers, restart or stats
+7) To check running containers or docker restart 
 ```
 sudo docker ps
 ```
@@ -77,7 +77,8 @@ sudo docker restart webserver
 ```
 
 
-8) Log health status health check every 10 seconds + delete & backup log, and the page can be access externally http://qrious.australiaeast.cloudapp.azure.com/containerlogs.html 
+8) Log health status health check every 10 seconds + delete & backup on Sunday at 1.05am.
+  The log can be access from externally using the following link http://qrious.australiaeast.cloudapp.azure.com/containerlogs.html 
 
 ![image](https://user-images.githubusercontent.com/84843818/138662677-7a337c06-c2c0-4b7e-bc71-ce89db9f566f.png)
 
@@ -85,11 +86,11 @@ sudo docker restart webserver
 
 ![image](https://user-images.githubusercontent.com/84843818/138661843-7d1e1f88-04be-4941-8410-b60b0dac8252.png)
 
-API server is up and running, but REST API is incomplete and still working in progress.
+API server is up and running, however REST API client is incomplete.
 
 ![image](https://user-images.githubusercontent.com/84843818/138663256-18b85cc2-7274-4860-a95d-3f167ed27773.png)
 
-The finaly plan is getting Rest Api to pass the string of 'healthy' or 'unhelthy' to the healthstatus script for info such as below.
+The finaly plan is to have Rest Api to pass input such as 'healthy' or 'unhealthy' to the healthstatus for result like below.
 ![image](https://user-images.githubusercontent.com/84843818/138663727-4ccd9b6a-6ba9-4093-82fd-acf1aae2d48c.png)
 
 
