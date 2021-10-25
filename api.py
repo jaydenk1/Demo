@@ -2,7 +2,7 @@
 
 from flask import Flask, request, send_file, jsonify, Response, render_template
 #from healthstatus import check_log
-import panda as pd
+#import panda as pd
 
 
 app = Flask(__name__)
