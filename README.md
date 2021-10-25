@@ -28,13 +28,15 @@ The goal of terraform code and scripts in this repository are:
 git clone https://github.com/jaydenk1/Demo && cd Demo/
 ``` 
 
-Important: Create a 'scripts' folder on the choosen location. Move the following scripts (7 scripts highlight in red) into the 'scripts' folder.
+Important: Once you have download the code, create 2 sub folders. One for 'scripts' and the other 'Tif'. Move files with scripts extension to scripts folder (7 scripts highlight in red). Terraform file to Tif folder (highlight in yellow).
 
-![image](https://user-images.githubusercontent.com/84843818/138690066-2ba06171-20d8-4b31-9e66-37f0281a3ffe.png)
+![image](https://user-images.githubusercontent.com/84843818/138694989-65dd1fed-af08-4e1a-bb1f-5d22c47ecf04.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/84843818/138668553-92710c83-a4e3-4ef0-9f41-68448ab244a6.png)
 
+![image](https://user-images.githubusercontent.com/84843818/138694842-1b22270b-1fd2-47d4-b2fc-0c97becf0392.png)
 
 
 2) Initialize terraform and then terraform plan
@@ -64,12 +66,14 @@ terraform output -raw tls_private_key
 ```
 Save the private key to user folder C:/{user}/.ssh/
 
+
 6) To connect to the server simply, run the following command in terminal.
 
 ```
 ssh -i {full .pkk file location & name} qriousadmin@{IP add of the server}
 ```
-![image](https://user-images.githubusercontent.com/84843818/137739042-87a2d4e4-0707-49ca-a2a9-7d6804e30982.png)
+![image](https://user-images.githubusercontent.com/84843818/138695230-6d9840b3-961f-4631-9197-39930c28a9dc.png)
+
 
 7) To check running containers or docker restart 
 ```
