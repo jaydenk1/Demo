@@ -36,9 +36,13 @@ Important: Create a 'scripts' folder on the choosen location. Move the following
 
 
 
-2) Initialize terraform.
+2) Initialize terraform and then terraform plan
 ```
 terraform init
+``` 
+
+```
+terraform plan
 ``` 
 
 ![image](https://user-images.githubusercontent.com/84843818/137726080-c08b6860-3bce-4642-a2cf-22e51165b0e3.png)
@@ -62,7 +66,7 @@ Save the private key to user folder C:/{user}/.ssh/
 6) To connect to the server simply, run the following command in terminal.
 
 ```
-ssh -i {.pkk file location} qriousadmin@{IP add of the server}
+ssh -i {full .pkk file location & name} qriousadmin@{IP add of the server}
 ```
 ![image](https://user-images.githubusercontent.com/84843818/137739042-87a2d4e4-0707-49ca-a2a9-7d6804e30982.png)
 
