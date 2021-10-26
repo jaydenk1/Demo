@@ -27,7 +27,14 @@ The goal of terraform code and scripts in this repository are:
 git clone https://github.com/jaydenk1/Demo && cd Demo/
 ``` 
 
-![image](https://user-images.githubusercontent.com/84843818/138694989-65dd1fed-af08-4e1a-bb1f-5d22c47ecf04.png)
+Unzip both of the zip files
+```
+expand-Archive -Path C:\PATH\scripts.zip -DestinationPath C:\DIRECTORY_CHOICE
+```
+```
+expand-Archive -Path C:\PATH\tf.zip -DestinationPath C:\DIRECTORY_CHOICE
+```
+
 
 scripts folder should only containing scripting files
 
@@ -38,7 +45,9 @@ tf folder should only containing terraform files
 
 ![image](https://user-images.githubusercontent.com/84843818/138814077-908bbfff-2883-48ee-9bd9-fc69171e3991.png)
 
-Once you have download the codes, change directory to 'tf', this is where you can run the terraform command.
+Once you have download the codes and unzip both of the zip and place on the same directory.
+
+Change the directory to 'tf', this is where you can run the terraform command.
 ```
 cd tf
 ``` 
