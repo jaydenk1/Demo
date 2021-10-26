@@ -29,7 +29,15 @@ git clone https://github.com/jaydenk1/Demo && cd Demo/
 
 ![image](https://user-images.githubusercontent.com/84843818/138694989-65dd1fed-af08-4e1a-bb1f-5d22c47ecf04.png)
 
-Once you have download the codes, change directory to 'tf'.
+scripts folder should only containing scripting files
+
+![image](https://user-images.githubusercontent.com/84843818/138813867-5a862889-d2f8-4aa5-a0c3-55fe488d0572.png)
+
+tf folder should only containing terraform files
+![image](https://user-images.githubusercontent.com/84843818/138813846-f02034f8-41c5-4c72-96b8-28b7b4c2d853.png)
+
+
+Once you have download the codes, change directory to 'tf', this is where you can run the terraform command.
 ```
 cd tf
 ``` 
