@@ -10,7 +10,7 @@ The goal of terraform code and scripts in this repository are:
 - Create a Virtual Network and subnet in Azure.
 - Create NSG and set rules to allow public ip.
 - Associate NSG with subnet. 
-- Create a linux virutal machine in the previously created subnet.
+- Create a linux virtual machine in the previously created subnet.
 - Place and execute a script on the virtual machine to change firewall settings.
 - Install Docker and run nginx container on the virtual machine.
 - Log health status and usage of the container to a log file.
