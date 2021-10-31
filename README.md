@@ -111,12 +111,17 @@ sudo docker restart webserver
 
 ![image](https://user-images.githubusercontent.com/84843818/138661843-7d1e1f88-04be-4941-8410-b60b0dac8252.png)
 
-API server is up and running, however REST API client is incomplete.
+API server is up and running.
 
 ![image](https://user-images.githubusercontent.com/84843818/138663256-18b85cc2-7274-4860-a95d-3f167ed27773.png)
 
-The final plan is to have Rest Api working by pass the input such as 'healthy' or 'unhealthy' status procure the result, but incomplete.
-![image](https://user-images.githubusercontent.com/84843818/138663727-4ccd9b6a-6ba9-4093-82fd-acf1aae2d48c.png)
+This is a simple REST API, which will only result the result of 'healthy' or 'unhealthy'. 
+Anything else will get the following message "Please try again..."
+
+![image](https://user-images.githubusercontent.com/84843818/139580898-5cf0640d-b351-421e-8c2e-19d818fccf2b.png)
+
+This is still working in progress.. 
+![image](https://user-images.githubusercontent.com/84843818/139581003-ae3ce703-8754-49b5-aa19-bac8db9f2b98.png)
 
 
 
