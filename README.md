@@ -111,16 +111,17 @@ sudo docker restart webserver
 
 ![image](https://user-images.githubusercontent.com/84843818/138661843-7d1e1f88-04be-4941-8410-b60b0dac8252.png)
 
-API server is up and running.
+
+9) API server is up and running on port 8080.
 
 ![image](https://user-images.githubusercontent.com/84843818/138663256-18b85cc2-7274-4860-a95d-3f167ed27773.png)
 
-This is a simple REST API, which will only result the result of 'healthy' or 'unhealthy'. 
+Simple REST API which will only pull data result 'healthy' or 'unhealthy'. 
 Anything else will get the following message "Please try again..."
 
 ![image](https://user-images.githubusercontent.com/84843818/139580898-5cf0640d-b351-421e-8c2e-19d818fccf2b.png)
 
-This is still working in progress.. 
+Result 
 ![image](https://user-images.githubusercontent.com/84843818/139581003-ae3ce703-8754-49b5-aa19-bac8db9f2b98.png)
 
 
