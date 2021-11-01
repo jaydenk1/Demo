@@ -116,14 +116,20 @@ sudo docker restart webserver
 
 ![image](https://user-images.githubusercontent.com/84843818/138663256-18b85cc2-7274-4860-a95d-3f167ed27773.png)
 
-Simple REST API which will only pull data result 'healthy' or 'unhealthy'. 
+Simple REST API which will only pull data result 'healthy', 'unhealthy', 'starting' or 'exited'. 
 Anything else will get the following message "Please try again..."
+![image](https://user-images.githubusercontent.com/84843818/139683895-86d1c274-f907-4cac-ab07-b7ad4d374d8e.png)
 
-![image](https://user-images.githubusercontent.com/84843818/139580898-5cf0640d-b351-421e-8c2e-19d818fccf2b.png)
 
 Result 
-![image](https://user-images.githubusercontent.com/84843818/139581003-ae3ce703-8754-49b5-aa19-bac8db9f2b98.png)
 
+![image](https://user-images.githubusercontent.com/84843818/139683408-d014cfec-44c6-412d-b881-10f40b052c5a.png)
+
+![image](https://user-images.githubusercontent.com/84843818/139683595-98546937-561f-44f0-a9ca-6bb377aba244.png)
+
+![image](https://user-images.githubusercontent.com/84843818/139683504-ee5f21f0-2051-4777-bcdf-fde9e7ab6144.png)
+
+![image](https://user-images.githubusercontent.com/84843818/139683845-1c06a2ce-f51d-4ad1-8d2f-3f870f59eecc.png)
 
 
 # Risks
